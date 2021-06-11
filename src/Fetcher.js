@@ -1,13 +1,20 @@
-import { createConnection } from 'mysql';
-import http from "http2";
+const mysql = import('mysql');
+const express = import('express');
+const http = import('http');
+const app = express();
 
-var server = http.createServer((req,res) => {
-	console.log(req);
-	res.end();
-}).listen(3333);
+var server = http.createServer(app).listen(3333,function(err) {
+  if (err) {
+    console.log(err);
+  } else {
+    const host = server.address().address;
+    const port = server.address().port;
+    console.log(`Server listening on ${host}:${port}`);
+  }
+});
 
-var connection = createConnection({
-  host     : 'localhost',
+var connection = mysql.createConnection({
+  host     : '192.168.1.150',
   user     : 'root',
   password : 'admin',
   database : 'inventory'
