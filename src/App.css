@@ -1,0 +1,31 @@
+tr{
+    text-align: center;
+}
+table {
+    width: 80% !important;
+    margin: 0 auto;
+}
+.material-row {
+    cursor: pointer;
+}
+.data-table {
+    margin-top: 2em;
+}
+.center-button {
+    margin: 0 auto !important;
+    display: flex;
+}
+.myform {
+    padding-top: 1em;
+}
+.myform > * {
+    padding-bottom: 1em;
+}
+button {
+    width: max-content !important;
+    margin-top: 1em;
+    margin-right: 1em !important;
+}
+body {
+    background-color: rgba(124, 117, 117, 0.3);
+}
