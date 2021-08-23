@@ -25,7 +25,7 @@ const AddItem = (props) => {
 		fetch(`${API_URL}/add_material`,requestOptions).then(res => {
 			res = res.json();
 			if(res.success) {
-				self.fetchMaterials();
+				props.self.fetchMaterials();
 			} else {
 				alert('Some error occured while adding data');
 			}
@@ -76,7 +76,7 @@ const AddItem = (props) => {
 						type="button">
 						Back
 					</button>
-					<button className="btn btn-success btn-md" onClick={() => this.submit()} type="button">Submit</button>
+					<button className="btn btn-success btn-md" onClick={() => submit()} type="button">Submit</button>
 				</div>
 			</Form>
 		</div>
